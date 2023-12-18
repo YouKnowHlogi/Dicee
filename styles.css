@@ -1,0 +1,59 @@
+.container {
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.dice {
+  text-align: center;
+  display: inline-block;
+
+}
+button {
+  background-color: #393E46;
+  border-style: none;
+}
+
+body {
+  background: linear-gradient(300deg, #380634, #1f1d20, #135772);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+  color: white;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1 {
+  margin: 30px;
+  font-family: 'Lobster', cursive;
+  font-size: 8rem;
+  color: #ffffff;
+}
+
+p {
+  font-size: 2rem;
+  color: #ffffff;
+  font-family: 'Indie Flower', cursive;
+}
+
+img {
+  width: 80%;
+}
+
+footer {
+  margin-top: 5%;
+  color: #EEEEEE;
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+
+}

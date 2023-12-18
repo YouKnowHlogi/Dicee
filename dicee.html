@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1 id="winnerText" onclick="rollDice()">Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img id="dice1" src="/images/dice2.png" alt="Dice 1">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img id="dice2" src="/images/dice6.png" alt="Dice 2">
+      </div>
+
+    </div>
+    <script>
+      // Array of dice images
+      var diceImages = [
+          '/images/dice1.png',
+          '/images/dice2.png',
+          '/images/dice3.png',
+          '/images/dice4.png',
+          'images/dice5.png',
+          'images/dice6.png'
+      ];  
+      function rollDice() {
+            // Generate random numbers between 1 and 6 for each die
+            var roll1 = Math.floor(Math.random() * 6) + 1;
+            var roll2 = Math.floor(Math.random() * 6) + 1;
+
+            // Update the src attribute of the dice images
+            document.getElementById('dice1').src = diceImages[roll1 - 1]; // Subtract 1 to match array index
+            document.getElementById('dice2').src = diceImages[roll2 - 1]; // Subtract 1 to match array index
+            
+            var winnerText = "";
+            if (roll1 > roll2) {
+                winnerText = "Player 1 wins!";
+            } else if (roll2 > roll1) {
+                winnerText = "Player 2 wins!";
+            } else {
+                winnerText = "It's a tie!";
+            }
+
+            // Update the winnerText element
+            document.getElementById('winnerText').textContent = winnerText;
+    }
+      
+    </script>
+
+
+  </body>
+
+  <footer>
+  🎲 Madiseng Digital 🎲
+  </footer>
+</html>
